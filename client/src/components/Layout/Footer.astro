@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="relative w-full p-2 bottom-0 text-gray-400">
+  <div
+    class="max-w-screen-xl px-4 py-2 mx-auto flex justify-between items-center sm:px-6 lg:px-8"
+  >
+    <div class="flex flex-col items-center mb-6">
+      <p class="text-base leading-6">
+        © {new Date().getFullYear()}
+        <a
+          href="https://www.github.com/daviardev"
+          class="text-red-500 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          daviardev
+        </a>
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center space-y-2">
+      <a
+        href="https://github.com/daviardev/game-store"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-white font-extrabold hover:underline"
+      >
+        <Icon name="github" class="w-6 h-6 text-gray-400 hover:text-white" />
+      </a>
+      <Icon name="clickHere" class="right-7 relative" />
+    </div>
+  </div>
+</footer>

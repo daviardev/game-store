@@ -1,0 +1,53 @@
+---
+import Navbar from "./Navbar.astro";
+import Footer from "./Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Game Store" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Game Store · {title}</title>
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <main class="my-8 flex-grow">
+      <Navbar />
+      <section class="w-full pt-14 pe-14 max-w-screen-2xl me-auto ms-auto">
+        <slot />
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Geist";
+    src: url(/font/GeistVF.woff2) format("woff2");
+    font-weight: normal;
+    font-size: inherit;
+  }
+
+  body,
+  html {
+    color: white;
+    background: black;
+    font-family: "Geist", sans-serif;
+  }
+
+  input {
+    background: transparent;
+  }
+</style>
